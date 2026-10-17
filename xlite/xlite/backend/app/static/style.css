@@ -1,0 +1,84 @@
+:root {
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --text: #14171a;
+  --muted: #657786;
+  --accent: #1d9bf0;
+  --border: #e1e8ed;
+  --danger: #c0392b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+
+header h1 { margin: 0; font-size: 1.3rem; color: var(--accent); }
+#user-bar { display: flex; gap: 12px; align-items: center; }
+
+main { max-width: 600px; margin: 20px auto; padding: 0 16px; }
+
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+h2 { margin: 0 0 12px; font-size: 1.1rem; }
+
+label { display: block; margin-bottom: 12px; font-size: 0.9rem; }
+
+input, textarea {
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+}
+
+textarea { resize: vertical; }
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover { filter: brightness(0.95); }
+#logout-btn { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+
+.row { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.muted { color: var(--muted); font-size: 0.9rem; }
+.error { color: var(--danger); min-height: 1.2em; margin: 8px 0 0; font-size: 0.9rem; }
+
+#feed { list-style: none; margin: 0; padding: 0; }
+.post { padding: 12px 0; border-top: 1px solid var(--border); }
+.post:first-child { border-top: 0; }
+.post-head { display: flex; justify-content: space-between; gap: 8px; font-size: 0.9rem; }
+.post-head time { color: var(--muted); }
+.post p { margin: 6px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+
+[hidden] { display: none !important; }

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X Lite</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>X Lite</h1>
+    <div id="user-bar" hidden>
+      <span id="current-user"></span>
+      <button id="logout-btn" type="button">Log out</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="auth-card" hidden>
+      <h2 id="auth-title">Log in</h2>
+      <form id="auth-form">
+        <label>Username
+          <input id="username" name="username" autocomplete="username" required>
+        </label>
+        <label>Password
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+        </label>
+        <button type="submit" id="auth-submit">Log in</button>
+      </form>
+      <p class="muted">
+        <span id="auth-switch-text">No account yet?</span>
+        <a href="#" id="auth-switch">Register</a>
+      </p>
+      <p id="auth-error" class="error" role="alert"></p>
+    </section>
+
+    <section id="composer" hidden>
+      <form id="post-form">
+        <textarea id="post-content" maxlength="280" rows="3" placeholder="What is happening?" required></textarea>
+        <div class="row">
+          <span id="counter" class="muted">0 / 280</span>
+          <button type="submit">Post</button>
+        </div>
+      </form>
+      <p id="post-error" class="error" role="alert"></p>
+    </section>
+
+    <section id="feed-section">
+      <h2>Latest posts</h2>
+      <ul id="feed"></ul>
+      <p id="empty" class="muted" hidden>No posts yet. Be the first.</p>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
